@@ -32,6 +32,7 @@ export default function homepage() {
         </main>
         <footer className="row row-center">All Rights Reserved</footer>
       </div>
+      <h1> </h1>
     </div>
   );
 }
