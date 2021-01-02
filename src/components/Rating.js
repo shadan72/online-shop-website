@@ -24,6 +24,9 @@ export default function Rating(props) {
       <FontAwesomeIcon
         icon={rating >= 5 ? faStar : rating >= 4.5 ? farStarHalf : farStar}
       />
+      <span>
+        {numReviews + ' reviews'}
+      </span>
     </div>
   );
 }
