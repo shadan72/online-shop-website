@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import data from "./data";
 import Product from "./components/Product";
 export default function homepage() {
@@ -21,18 +19,17 @@ export default function homepage() {
         <main>
           <div className="row center">
             {data.products.map((product) => (
+              <div>
               <Product key="product._id" product={product} />
+              
+              </div>
             ))}
-
-            <div>
-              <FontAwesomeIcon icon="check-square" />
-              Your <FontAwesomeIcon icon={faStar} /> is hot and ready!
-            </div>
+ 
           </div>
         </main>
         <footer className="row row-center">All Rights Reserved</footer>
       </div>
-      <h1> </h1>
+   
     </div>
   );
 }
