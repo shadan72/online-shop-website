@@ -1,11 +1,11 @@
-import Dress from "./images/Dress.png";
+
 const data = {
   products: [
     {
-      _id: "1",
+      _iid: "12",
       name: " Slim Dress",
       category: "Dress",
-      image: Dress,
+      image: "/images/Dress.png",
       rating: 0.5,
       review: 10,
       price: 20,
@@ -13,10 +13,10 @@ const data = {
       countOnStock:0
     },
     {
-      _id: "2",
+      _iid: "22",
       name: " Slim Dress",
       category: "Dress",
-      image: Dress,
+      image: "/images/Dress.png",
       rating: 2,
       review: 100,
       price: 26,
@@ -24,10 +24,10 @@ const data = {
       countOnStock:10
     },
     {
-      _id: "3",
+      _iid: "32",
       name: " Slim Dress",
       category: "Dress",
-      image: Dress,
+      image: "/images/Dress.png",
       rating: 5,
       review: 50,
       price: 80,
@@ -35,10 +35,10 @@ const data = {
       countOnStock:200
     },
     {
-      _id: "4",
+      _iid: "42",
       name: " Slim Dress",
       category: "Dress",
-      image: Dress,
+      image: "/images/Dress.png",
       rating: 4,
       review: 20,
       price: 300,
@@ -46,10 +46,10 @@ const data = {
       countOnStock:40
     },
     {
-      _id: "5",
+      _iid: "25",
       name: " Slim Dress",
       category: "Dress",
-      image: Dress,
+      image: "/images/Dress.png",
       rating: 1.5,
       review: 18,
       price: 180,
@@ -57,10 +57,10 @@ const data = {
       countOnStock:26
     },
     {
-      _id: "6",
+      _iid: "62",
       name: " Slim Dress",
       category: "Dress",
-      image: Dress,
+      image: "/images/Dress.png",
       rating: 3.5,
       review: 8,
       price: 98,
