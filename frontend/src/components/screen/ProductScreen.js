@@ -18,11 +18,15 @@ const ProductItemSelector = useSelector(state => state.ProductItem)
 const { loading, product, error}=ProductItemSelector
 const dispatch = useDispatch()
 const productId=props.match.params.id;
-const [quantity, setQuantity] = useState()
+const [quantity, setQuantity] = useState(1)
     useEffect(() => {
     dispatch(ProductItem(productId))
     }, [dispatch,productId])
 
+
+    const addToCartHandler=()=>{
+     props.history.push(`/cart/${productId}?quantity=${quantity}`)
+    }
     return (
              <div>
       
@@ -66,7 +70,7 @@ const [quantity, setQuantity] = useState()
                        )}
                   </select>
 
-                 <button> Add to Cart</button>
+                 <button onClick={addToCartHandler}> Add to Cart</button>
                  
                  </>
                  ):(<div>Out of Stock</div>)}
