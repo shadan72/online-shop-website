@@ -10,8 +10,7 @@ const data = {
       review: 10,
       price: 20,
       description:" ddsp1",
-      countOnStock:0
-    },
+      countOnStock:0    },
     {
       _id: "2",
       name: " Slim Dress",
@@ -21,7 +20,7 @@ const data = {
       review: 100,
       price: 26,
       description:" Dsp2",
-      countOnStock:10
+      countOnStock:10,
     },
     {
       _id: "3",

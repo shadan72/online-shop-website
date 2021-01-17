@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { ProductItem } from '../../actions/ProductActions';
@@ -18,6 +18,7 @@ const ProductItemSelector = useSelector(state => state.ProductItem)
 const { loading, product, error}=ProductItemSelector
 const dispatch = useDispatch()
 const productId=props.match.params.id;
+const [quantity, setQuantity] = useState()
     useEffect(() => {
     dispatch(ProductItem(productId))
     }, [dispatch,productId])
@@ -48,7 +49,33 @@ const productId=props.match.params.id;
                  </li>
                  <li>{product.countOnStock >= 1 ? <span>In stock</span>: <span>Not in stock</span>}</li>
              </ul>
-             <button> Add to Cart</button>
+             <li>
+                 <div>
+                    
+                 {product.countOnStock > 0 ? (
+                 <>
+                  <div>Quantity</div>
+                  <select value={quantity} onChange={(e) => setQuantity(e.target.value)}>
+                  {[...Array(product.countOnStock).keys()].map(
+                       (x) =>
+                       (
+                           <option key={x+1} value={x+1}>
+                               {x+1}
+                           </option>
+                       )
+                       )}
+                  </select>
+
+                 <button> Add to Cart</button>
+                 
+                 </>
+                 ):(<div>Out of Stock</div>)}
+               
+                 </div>
+                 
+                
+                 </li>
+            
             </div>
 
             <div >
