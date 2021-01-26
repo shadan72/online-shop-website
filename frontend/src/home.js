@@ -1,7 +1,7 @@
 import React from "react";
 import ProductScreen from "./components/screen/ProductScreen"
 import HomeScreen from "./components/screen/HomeScreen"
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Link, Route } from "react-router-dom";
 import CartScreen from "./components/screen/CartScreen";
 export default function homepage() {
   return (
@@ -10,13 +10,13 @@ export default function homepage() {
       <div className="grid-container">
         <header className="row">
           <div>
-            <a className="brand" href="/">
+            <Link className="brand" to="/">
               Online Shop
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/cart">Cart</a>
-            <a href="/signin">Sign In</a>
+            <Link to="/cart">Cart</Link>
+            <Link to="/signin">Sign In</Link>
           </div>
         </header>
         <main> 
